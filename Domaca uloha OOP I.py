@@ -8,9 +8,14 @@ class Package:
         self.recipient = recipient
         self.weight = weight
         self.status = status
+# 1.2 Metody v triede
+    def __str__(self):
+        return f"Balik pre: {self.sender}, Od: {self.recipient}, Vaha: {self.weight}, Stav: {self.status}"
 
 balik1 = Package("School", "Marek", "0.5", "Na ceste")
 balik2 = Package("Work", "Radovit", "2", "Doruceny")
 
-print(balik1.__dict__)
+print(balik1.__str__())
+print(balik2.__str__())
+
 
